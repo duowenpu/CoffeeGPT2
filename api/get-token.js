@@ -1,7 +1,6 @@
 export default function handler(req, res) {
     // 从环境变量中获取 Token
     const token = process.env.COZE_TOKEN;
-    console.log(token);
     if (!token) {
         return res.status(500).json({ error: 'Server configuration error' });
     }
